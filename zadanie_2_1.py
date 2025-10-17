@@ -13,3 +13,22 @@ Write a function—algorithm (e.g., in the form of a step-by-step list, pseudoco
 or in a programming language of your choice) — that checks whether a given positive integer is a prime number
 for values from 2 up to a given value n. Document the function in the task specification.
 """
+
+
+def is_prime(x: int) -> bool:
+    if x < 1:
+        raise ValueError('Ta liczba nie jest naturalna lub jest mniejsza od 2.')
+    for i in range(x // 2, 2, -1):
+        if x % i == 0:
+            return False
+    return True
+
+
+if __name__ == '__main__':
+    assert is_prime(13)
+    assert not is_prime(22)
+    try:
+        is_prime(0)
+        raise Exception('Test failed')
+    except ValueError as error:
+        pass

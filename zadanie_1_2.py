@@ -92,6 +92,8 @@ def scalanie_bez_dublikatow_4(tab1: List[int], tab2: List[int]):
 
     return [element for element in scalenie if element is not None]
 
+def scalanie_bez_dublikatow_4(tab1: List[int], tab2: List[int]):
+
 
 def test_scalanie_bez_dublikatow(func_to_test: Callable):
     assert sorted(func_to_test([4, 3, 1, 2, 2, 3, 4], [2, 3, 3])) == [1, 2, 3, 4]
