@@ -1,5 +1,6 @@
 """
-Dany jest algorytm, który wyznacza wartość x^n dla zadanych wartosci x >= 0 oraz n >= 0 rekurencycjna metoda szybkiego potegowania.
+Dany jest algorytm, który wyznacza wartość x^n dla zadanych wartosci x >= 0 oraz n >= 0
+rekurencycjna metoda szybkiego potegowania.
 funkcja oblicz(x, n)
     jeżeli n = 0
         zwróć 1
@@ -14,8 +15,14 @@ funkcja oblicz(x, n)
 
 Zadanie 4.1. Ile razy? (0–1 pkt)
 Dla podanych poniżej wartości wyznacz liczbę wywołań funkcji oblicz.
+x | n
+2 | 10
+7 | 13
+4 | 16
+3 | 35
 
 Zadanie 4.2. Dokonaj modyfikacji (0–3 pkt)
-Napisz algorytm w postaci pseudokodu lub w wybranym języku programowania, który powyższą funkcję rekurencyjną zastąpi iteracją.
+Napisz algorytm w postaci pseudokodu lub w wybranym języku programowania,
+który powyższą funkcję rekurencyjną zastąpi iteracją.
 Podpowiedź: Metoda szybkiego potęgowania iteracyjnego jest nazywana również potęgowaniem binarnym.
 """
