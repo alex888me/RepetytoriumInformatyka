@@ -19,11 +19,5 @@ w przeciwnym przypadku
 
 Uwaga: mod oznacza resztę z dzielenia, div oznacza część całkowitą z dzielenia.
 
-Zadanie 3.2. Odpowiedz na pytania (0–1 pkt)
-Zaznacz odpowiednio P – prawda lub F – fałsz.
-Nr	Treść zdania	P	F
-1	Wartość p zmienia się tyle samo razy, ile powtórzeń wykonuje główna pętla.
-2	Zmienna k wskazuje liczbę dzielników całkowitych zmiennej n.
-3	Napis TAK jest wypisywany, jeśli n ma parzystą liczbę różnych czynników w rozkładzie na czynniki pierwsze.
-4	Napis NIE jest wypisywany, jeśli n ma nieparzystą liczbę czynników w rozkładzie na czynniki pierwsze.
+
 """
