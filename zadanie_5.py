@@ -49,3 +49,32 @@ Określ, ile razy wykona się instrukcja jeżeli s1[i−1] != s2[j−1].
 Zadanie 5.3. Złożoność (0–1 pkt)
 Określ złożoność pamięciową algorytmu.
 """
+
+def algorytm(s1: str, s2: str):
+    m = len(s1)
+    n = len(s2)
+    wypisane = ''
+    maxi = ind = 0
+    r = max(n, m)
+    t = [[0 for x in range(r)] for i in range(r)]
+    for i in range(0, r-1):
+        t[0][i] = t[i][0] = 0
+    for i in range(m):
+        for j in range(n):
+            if s1[i-1] != s2[j-1]:
+                t[i][j] = 0
+            else:
+                t[i][j] = t[i-1][j-1] + 1
+                if t[i][j] > maxi:
+                    maxi = t[i][j]
+                    ind = i
+
+    if maxi != 0:
+        for i in range(maxi):
+            wypisane += s1[ind+i-maxi]
+
+    return (maxi, wypisane)
+if __name__ == '__main__':
+    pass
+    assert algorytm('hdjdusyhd', 'aosjdusyaa') == (5, 'jdusy')
+    assert algorytm('opona', 'pisaek') == (1, 'a')
