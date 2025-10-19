@@ -48,3 +48,17 @@ Tekst jawny	                     | n  | Tekst zaszyfrowany
 DOSTAWA W CZWARTEK               | 20 |
 KURIER PRZYJEDZIE O SIEDEMNASTEJ | 17 |
 """
+
+def fibbonaci(n: int):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    elif n >= 2:
+        return fibbonaci(n-1) + fibbonaci(n - 2)
+
+if __name__ == '__main__':
+    assert fibbonaci(5) == 5
+    assert fibbonaci(9) == 34
+    assert fibbonaci(10) == 55
+
