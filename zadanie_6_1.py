@@ -19,34 +19,6 @@ Na podstawie definicji ciągu Fibonacciego napisz algorytm (np. w postaci listy 
 wybranym języku programowania), który sprawdzi, czy podana przez użytkownika liczba należy do ciągu liczb Fibonacciego.
 Jako wynik powinien pojawić się komunikat TAK, jeśli liczba należy do ciągu liczb Fibonacciego, lub NIE,
 jeśli nie należy. Pamiętaj o zapisaniu specyfikacji do zadania.
-
-Zadanie 6.2. Proste szyfrowanie (0–4 pkt)
-Szyfrem podstawieniowym nazywamy taki szyfr, w którym literę tekstu jawnego zastępujemy inną literą lub ciągiem znaków.
-Ciąg liczb Fibonacciego możemy wykorzystać jako klucz szyfrowania, który pozwoli nam na zmianę kolejnych liter na inne.
-Nasze szyfrowanie będzie opierało się na zasadzie, zgodnie z którą kolejna litera tekstu zaszyfrowanego będzie
-powstawała przez podstawienie za literę tekstu jawnego litery oddalonej od niej o kolejną wartość z ciągu Fibonacciego.
-Ponieważ liter do zaszyfrowania może być bardzo dużo, a liczby z ciągu bardzo szybko rosną, dlatego do obliczania
-kolejnych wartości będziemy wykorzystywać własności arytmetyki modularnej.
-
-F(x)=(F(x−1)+F(x−2))modn
-
-Przykład:
-Tekst jawny: KATASTROFA
-Klucz: Kolejne wartości ciągu Fibonacciego mod 13 (mod – reszta z dzielenia)
-11 2 3 5 8 0 8 8 3
-Tekst zaszyfrowany: LBVDXBRWND
-
-Napisz algorytm (np. w postaci listy kroków, w pseudokodzie lub w wybranym języku programowania),
-który dla podanego tekstu jawnego, składającego się tylko z dużych znaków alfabetu angielskiego,
-i wartości n, dzielnika w arytmetyce modularnej, wyznaczy tekst zaszyfrowany. Wszystkie inne znaki
-(spacje i znaki diakrytyczne) przy szyfrowaniu się pomija, a w wyniku otrzymujemy jedynie ciąg liter.
-Pamiętaj o zapisaniu specyfikacji do zadania.
-
-Zadanie 6.3. Szyfrowanie – analiza (0–1 pkt)
-Dla podanej w zadaniu 6.2 metody szyfrowania uzupełnij poniższą tabelę poprawnymi rozwiązaniami.
-Tekst jawny	                     | n  | Tekst zaszyfrowany
-DOSTAWA W CZWARTEK               | 20 |
-KURIER PRZYJEDZIE O SIEDEMNASTEJ | 17 |
 """
 from sys import maxsize
 
@@ -87,7 +59,6 @@ def is_fibbonaci(n: int):
         return True
     else:
         return False
-
 
 if __name__ == '__main__':
     assert is_fibbonaci(5)
