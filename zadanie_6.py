@@ -48,17 +48,51 @@ Tekst jawny	                     | n  | Tekst zaszyfrowany
 DOSTAWA W CZWARTEK               | 20 |
 KURIER PRZYJEDZIE O SIEDEMNASTEJ | 17 |
 """
+from sys import maxsize
 
-def fibbonaci(n: int):
-    if n == 0:
+
+def fibbonaci_recursion(n: int):
+    if not isinstance(n, int) or n < 0:
+        raise ValueError('Liczba jest mniejsza od 0 lub nie jest typu int')
+    elif n == 0:
         return 0
     elif n == 1:
         return 1
     elif n >= 2:
-        return fibbonaci(n-1) + fibbonaci(n - 2)
+        return fibbonaci_recursion(n - 1) + fibbonaci_recursion(n - 2)
+
+
+def fibbonaci_loop(n: int):
+    if not isinstance(n, int) or n < 0:
+        raise ValueError('Liczba jest mniejsza od 0 lub nie jest typu int')
+    elif n == 0:
+        return 0
+    elif n == 1:
+        return 1
+
+    fibbonaci_list = [0, 1]
+    for x in range(2, n + 1):
+        fibbonaci_list.append(fibbonaci_list[x - 1] + fibbonaci_list[x - 2])
+    return fibbonaci_list
+
+
+def is_fibbonaci(n: int):
+    if not isinstance(n, int) or n < 0:
+        raise ValueError('Liczba musi byc 0 lub wieksza, lub jest to nie typ int.')
+    if n > 7540113804746346429:
+        raise ValueError('Liczba jest za duza')
+    fibbonaci_list = fibbonaci_loop(92)
+
+    if n in fibbonaci_list:
+        return True
+    else:
+        return False
+
 
 if __name__ == '__main__':
-    assert fibbonaci(5) == 5
-    assert fibbonaci(9) == 34
-    assert fibbonaci(10) == 55
-
+    assert is_fibbonaci(5)
+    assert is_fibbonaci(34)
+    assert is_fibbonaci(55)
+    assert is_fibbonaci(4660046610375530309)
+    assert not is_fibbonaci(99194853094755491)
+    assert not is_fibbonaci(10)
