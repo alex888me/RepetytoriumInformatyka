@@ -1,5 +1,8 @@
+import random
+import time
 from os import linesep
 
+random.seed(time.time())
 
 class Kostka:
     """
@@ -53,6 +56,59 @@ class Kostka:
                 self.dol()
 
         return self.kostka[0]
+
+class Rozgrywka(Kostka):
+    def obrocic_raz(self, ruch: str) -> int:
+        if ruch == 'L':
+            self.lewo()
+        elif ruch == 'P':
+            self.prawo()
+        elif ruch == 'G':
+            self.gora()
+        elif ruch == 'D':
+            self.dol()
+
+    def pokrecic_kostke(self, ile_razy: int):
+        ruchy = 'LDPG'
+
+        for i in range(random.randint(1, ile_razy)):
+            litera = random.choice(ruchy)
+            self.obrocic_raz(litera)
+
+
+    def rozpoczecie_zabawy(self, ilosc_graczy: int):
+        punkty_graczow = [0 for gracz in range(ilosc_graczy)]
+
+        stara_kostka = self.kostka[:]
+
+        for gracz in range(ilosc_graczy):
+            for ruch in range(10):
+                self.pokrecic_kostke(1)
+                punkty_graczow[gracz] += self.kostka[4]
+            self.kostka = stara_kostka
+
+        gracz_z_najmniejszymi_punktami = (0, punkty_graczow[0])
+
+        for i in range(len(punkty_graczow)):
+            if punkty_graczow[i] < gracz_z_najmniejszymi_punktami[1]:
+                gracz_z_najmniejszymi_punktami = (i, punkty_graczow[i])
+
+        ilosc_wygranych = 0
+        for liczba_punktow in punkty_graczow:
+            if liczba_punktow == gracz_z_najmniejszymi_punktami[1]:
+                ilosc_wygranych += 1
+
+        if ilosc_wygranych > 1:
+            return 'Nikt nie wygrał'
+        else:
+            return f"Wygrał gracz nr.{gracz_z_najmniejszymi_punktami[0]+1} który miał {gracz_z_najmniejszymi_punktami[1]} punktów"
+
+
+
+zabawa = Rozgrywka()
+zabawa.pokrecic_kostke(100)
+print(zabawa.rozpoczecie_zabawy(20))
+
 
 if __name__ == '__main__':
     kostka = Kostka()
