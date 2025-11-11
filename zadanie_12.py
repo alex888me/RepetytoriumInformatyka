@@ -2,7 +2,7 @@ from pprint import pprint
 from string import ascii_uppercase
 
 litery = ascii_uppercase[:8]
-szachownica = [[0 for j in range(8)] for i in range(8)]
+
 
 def ile_bije(pozycja: str):
     ile_pozycji_moze_bic = 0
@@ -26,16 +26,5 @@ def ile_bije(pozycja: str):
     # w lewo dol
     ile_pozycji_moze_bic += min([pozycja[0], pozycja[1]])
 
+    return ile_pozycji_moze_bic
 
-
-
-    print(pozycja)
-    print(ile_pozycji_moze_bic)
-
-
-
-print(ile_bije('D5'))
-
-
-
-pprint(szachownica)
