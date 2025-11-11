@@ -1,3 +1,36 @@
+"""
+Zadanie 11. Kostka do gry
+
+Kości do gry – niewielkie wielościany z umieszczonymi na poszczególnych bokach liczbami (oczkami) – wykorzystywane są w grach planszowych, fabularnych, bitewnych i hazardowych w celu generowania losowych wyników. Najczęściej spotykane są kostki sześcienne.
+Tradycyjnie rozmieszczenie oczek (suma przeciwległych ścian równa 7) daje dwa możliwe typy kostek sześciennych – prawo- i lewoskrętne. Jeśli patrzymy na wierzchołek, na którym stykają się ściany oznaczone 1, 2, 3, rosnące wartości oznaczają kierunek. Na obrazku przedstawiono kostkę lewoskrętną.
+Siatka takiej kostki wygląda następująco:
+
+Zadanie 11.1. Schemat obrotu (0–2 pkt)
+Przyjmijmy, że położenie startowe kostki jest następujące:
+Kostkę możemy obracać w lewo – L, w prawo – P, w dół – D, w górę – G. Każdy obrót odbywa się o 90° w danym kierunku.
+Podaj wartość, która będzie na przedniej ścianie po wykonaniu sekwencji ruchów.
+
+| Sekwencja ruchów | Wartość na przedniej ścianie |
+| ---------------- | ---------------------------- |
+| LLGPPD           | 6                            |
+| DLLDPP           |                              |
+| DDDPPDDLG        |                              |
+
+Zadanie 11.2. Automat obrotu (0–3 pkt)
+Wymyśl, że komputer wykonuje następującą grę w kostkę, w której jedyną zasadą jest to, że suma oczek na przeciwległych ścianach zawsze wynosi 7. W układzie ścian przednia, górna i prawa (podobnie jak w zadaniu 11.1) następuje przeprowadzenie symulacji rozgrywki dwóch graczy.
+Rozgrywka powinna być zapisana w formie funkcji wywoływanej oddzielnie dla każdego z graczy.
+
+Zasady rozgrywki:
+
+Każdy z graczy tworzy sekwencję 10 ruchów.
+
+Każdy gracz zaczyna obroty kostką od takiego samego początkowego ustawienia.
+
+Po wykonaniu pojedynczego obrotu gracz dolicza się taką liczbę punktów, jaka znajduje się na górnej ścianie kostki.
+
+Wygrywa gracz, który zbierze najmniejszą liczbę punktów.
+"""
+
 import random
 import time
 from os import linesep

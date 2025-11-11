@@ -1,3 +1,34 @@
+"""
+Zadanie 12. Ośmiu hetmanów
+
+Problem ten został zdefiniowany w 1850 r. Polega on na ustawieniu ośmiu hetmanów (hetman to bierka w szachach, zwana
+również królową) na klasycznej szachownicy o rozmiarze 8×8 pól w taki sposób, aby żaden z nich nie mógł bić innego.
+Hetman może poruszać się w dowolnym kierunku (poziomo, pionowo oraz na ukos) o dowolną liczbę wolnych pól, jest więc
+jakby jednocześnie gońcem i wieżą. Hetman nie może przeskakiwać nad innymi bierkami. Hetman bije bierkę przeciwnika i
+zajmuje jej pole. Istnieją 92 takie ustawienia. Oto jedno z ustawień:
+
+Zadanie 12.1. Ile bije? (0–1 pkt)
+Współrzędne (x, y) położenia hetmana możemy określić, zamieniając literę na odpowiednią wartość liczbową A–1, B–2, itd.
+Czyli A1 to (1,1) w układzie XY.
+Dla położenia A1 możemy określić liczbę pól, które mogą być bite przez hetmana na nim stojącego.
+Dla położenia A1 możemy przyjąć, że współrzędne hetmana to (1,1), więc bije on 21 pól.
+
+Zadanie 12.2. Czy poprawny układ? (0–2 pkt)
+Szachownica zawiera położenie hetmanów w wierszach kolejnych kolumn. Dla przykładu z części głównej zadania wypisz,
+czy następujące ciągi tworzą układ, w którym jakikolwiek hetman jest bity przez innego.
+
+| Ciąg     | Bicie |
+| -------- | ----- |
+| 12345678 | TAK   |
+| 36428571 | NIE   |
+| 48136275 |       |
+| 63184572 |       |
+
+
+Zadanie 12.3. Stwórz kombinacje (0–5 pkt)
+Napisz algorytm w pseudokodzie lub w wybranym języku programowania, który wyznaczy wszystkie 92 kombinacje ustawienia hetmanów w taki sposób, aby żaden hetman nie bił innego.
+"""
+
 from pprint import pprint
 from string import ascii_uppercase
 from typing import Optional, List
