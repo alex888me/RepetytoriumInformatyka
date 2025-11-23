@@ -97,7 +97,11 @@ print(f"Zadanie 14.1\nIlosc liczb znajdujacych sie w ciagu fibbonaci to {fib_pri
 
 # Zadanie 14.2
 fib_primes.liczby_bliskie()
-print(f"Zadanie 14.2 opwoiedz\nLiczby w zakresie +- 1: {fib_primes.liczby_bliskie_z1}\nLiczby w zakresie +- 2: {fib_primes.liczby_bliskie_z2}\nLiczby w zakresie +- 3: {fib_primes.liczby_bliskie_z3}\n")
+print(f"Zadanie 14.2 opwoiedz\n"
+      f"Liczby w zakresie +- 1: {fib_primes.liczby_bliskie_z1}\n"
+      f"Liczby w zakresie +- 2: {fib_primes.liczby_bliskie_z2}\n"
+      f"Liczby w zakresie +- 3: {fib_primes.liczby_bliskie_z3}\n")
 
 # Zadanie 14.3
-print(f"Zadanie 14.3\n{sorted(fib_primes.liczba_fibbonaci_i_pierwsza())}")
+print(f"Zadanie 14.3\n"
+      f"{sorted(fib_primes.liczba_fibbonaci_i_pierwsza())}")
