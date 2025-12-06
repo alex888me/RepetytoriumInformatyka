@@ -1,3 +1,19 @@
+"""
+Zadanie 16 – Dzielniki
+W pliku jest 500 liczb od 1 do 5000. Trzeba znalezc dla nich okreslone informacje dotyczace dzielnikow.
+
+Zadanie 16.1 – Liczby wzglednie pierwsze
+Dwie liczby sa wzglednie pierwsze, gdy najwiekszy wspolny dzielnik to 1. Nalezy podac, ile jest liczb wzglednie
+pierwszych z kazda liczba w pliku.
+
+Zadanie 16.2 – Dokladnie dziewiec dzielnikow
+Z podanego zestawu liczb wypisac te, ktore maja dokladnie dziewiec dzielnikow.
+
+Zadanie 16.3 – Liczby doskonale
+Liczba doskonala to taka, ktorej suma wlasciwych dzielnikow rowna sie tej liczbie. Nalezy wypisac liczby doskonale
+z pliku.
+"""
+
 class Dzielniki():
     def __init__(self):
         self._lista_liczb = []

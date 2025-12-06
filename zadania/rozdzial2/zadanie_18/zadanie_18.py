@@ -1,3 +1,19 @@
+"""
+Zadanie 18 – Systemy liczbowe
+W pliku znajduje sie 100 wierszy po trzy liczby zapisane w systemach: binarnym, osemkowym i szesnastkowym. Znaki tworza
+liczby z zakresu do 2^24. Trzeba wykonac wskazane obliczenia.
+
+Zadanie 18.1 – Jaki system?
+Dla kazdej liczby ustalic, w jakim systemie jest zapisana. Podac liczbe wystapien kazdego systemu.
+
+Zadanie 18.2 – Max i min
+Dla liczb z zadania 18.1 wyznaczyc najwieksza i najmniejsza liczbe po przeliczeniu na dziesietny.
+
+Zadanie 18.3 – Ile znakow?
+Zliczyc czestosc wystepowania kazdego znaku od 0 do A we wszystkich liczbach z pliku i podac ja w procentach.
+"""
+
+
 from logging import setLogRecordFactory
 
 

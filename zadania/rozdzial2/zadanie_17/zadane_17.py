@@ -1,3 +1,17 @@
+"""
+Zadanie 17 – PESEL
+Opis ogolny numeru PESEL oraz sposob wyliczania cyfry kontrolnej.
+
+Zadanie 17.1 – Liczba kobiet i mezczyzn
+Na podstawie numerow PESEL okreslic, ile jest kobiet, a ile mezczyzn.
+
+Zadanie 17.2 – Bledna cyfra kontrolna
+Sprawdzic, ktore numery PESEL w pliku maja niepoprawna cyfre kontrolna i wypisac je.
+
+Zadanie 17.3 – Podzial wedlug rocznika
+Podzielic osoby na grupy wiekowe: 18 lat i mniej, 19–50, oraz powyzej 50 lat. Podac, ile osob nalezy do kazdej grupy.
+"""
+
 from datetime import datetime, timedelta
 
 
