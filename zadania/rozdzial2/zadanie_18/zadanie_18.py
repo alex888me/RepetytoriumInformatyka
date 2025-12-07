@@ -35,19 +35,6 @@ class Suma():
 
         return self._lista_liczb
 
-
-    # def to_base(self, number: int, base: int) -> str:
-    #     result = ''
-    #     sign = '-' if number < 0 else ''
-    #
-    #     number = abs(number)
-    #
-    #     while number > 0:
-    #         result = self.digits[number % base] + result
-    #         number //= base
-    #
-    #     return sign + result
-
     def to_num(self, number: str, base: int) -> int:
         number = number[::-1]
         in_decimal = 0
@@ -84,11 +71,6 @@ class Suma():
                         if min(liczba_1, liczba_2, liczba_3) < 2**64 - 1:
                             self.najmniejsza_wartosc = min(liczba_1, liczba_2, liczba_3)
 
-
-
-                        # if j == 15 or j == 16:
-                        #     print(j, ' - ', zbior_liczb,
-                        #           self.to_num(zbior_liczb[0], j),  self.to_num(zbior_liczb[1], j), self.to_num(zbior_liczb[2], j))
                         break
 
         return self._ile_razy_wystapil_system_liczbowy

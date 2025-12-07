@@ -17,8 +17,8 @@ Przy zasiegu niszczacym 2 km rakieta celuje w punkt o wspolrzednych calkowitych.
 maksymalne.
 """
 
-
 import math
+
 
 class ZestawRakietowy():
     ROZMIAR_ODDZIALU = 100
@@ -27,7 +27,6 @@ class ZestawRakietowy():
 
     def __init__(self):
         self._pozycje_oddzialow = []
-
 
     def dostac_pozycje_oddzialow(self):
         if not self._pozycje_oddzialow:
@@ -61,9 +60,8 @@ class ZestawRakietowy():
         nowy_maksymalny_zasieg = 0.1
 
         for pozycja_oddzialu in self.dostac_pozycje_oddzialow():
-            if self.obliczyc_dystans((0,0), pozycja_oddzialu) > nowy_maksymalny_zasieg:
-                nowy_maksymalny_zasieg = self.obliczyc_dystans((0,0), pozycja_oddzialu)
-
+            if self.obliczyc_dystans((0, 0), pozycja_oddzialu) > nowy_maksymalny_zasieg:
+                nowy_maksymalny_zasieg = self.obliczyc_dystans((0, 0), pozycja_oddzialu)
 
         return nowy_maksymalny_zasieg
 
@@ -89,19 +87,25 @@ class ZestawRakietowy():
                         wspolrzedne_najlepszego_strzalu = (x, y)
                         straty_od_najlepszego_strzalu = straty_od_danego_strzalu
 
-
-
         return wspolrzedne_najlepszego_strzalu, straty_od_najlepszego_strzalu
+
 
 zestaw_rakietowy = ZestawRakietowy()
 
 print(zestaw_rakietowy.dostac_pozycje_oddzialow(), '\n\n------\n')
 
+rakietowy_baraz1, rakietowy_baraz2 = zestaw_rakietowy.rakietowy_baraz()
+
 print(f"Zadanie 19.1\n - "
-      f"Straty przeciwnika to {int(zestaw_rakietowy.rakietowy_baraz()[0])}, oddzialow poza zasiegiem {zestaw_rakietowy.rakietowy_baraz()[1]}\n\n------\n")
+      f"Straty przeciwnika to {int(rakietowy_baraz1)}, "
+      f"oddzialow poza zasiegiem {rakietowy_baraz2}\n\n------\n")
 
 print(f"Zadanie 19.2\n"
-      f"- Minimalny maksymalny zasieg to {round(zestaw_rakietowy.maksymalny_zasieg_zeby_wszystkich_zabic(), 3)} km\n\n------\n")
+      f"- Minimalny maksymalny zasieg to "
+      f"{math.ceil(zestaw_rakietowy.maksymalny_zasieg_zeby_wszystkich_zabic() * 1000) / 1000} km\n\n------\n")
+
+wspolrzedne_najlepszego_strzalu, straty_od_najlepszego_strzalu = zestaw_rakietowy.najlepszy_stral()
 
 print(f"Zadanie 19.3\n"
-      f"- Wspolrzedne najlepszego strzalu to {zestaw_rakietowy.najlepszy_stral()[0]}, straty jakie poniesie wrog to {zestaw_rakietowy.najlepszy_stral()[1]}")
+      f"- Wspolrzedne najlepszego strzalu to {wspolrzedne_najlepszego_strzalu}, "
+      f"straty jakie poniesie wrog to {straty_od_najlepszego_strzalu}")

@@ -73,7 +73,7 @@ class Slowa():
         return self._lista_nie_anagramow
 
     def przekombinowana_buraz(self) -> list:
-        lista_liter = list('burza')
+        lista_liter = list('bura')
 
         #
         #
